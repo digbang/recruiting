@@ -1,0 +1,27 @@
+{
+    "name": "digbang/recruiting",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^5.0",
+        "illuminate/console": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guido Contreras Woda",
+            "email": "gcontreras@digbang.com"
+        },
+        {
+            "name": "Dario Govergun",
+            "email": "dgovergun@digbang.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Digbang\\": "src/"
+        }
+    }
+}
