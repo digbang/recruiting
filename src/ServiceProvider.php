@@ -12,7 +12,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        // 
+        //
     }
 
     public function boot(Factory $validation)
@@ -23,7 +23,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->loadViewsFrom(dirname(__DIR__) . '/resources/views', 'digbang');
 
-        $validation->extend('cv', function($value){
+        $validation->extend('cv', function($attribute, $value){
             $fol = new FileOrLink($value);
 
             return $fol->isFile() || $fol->isLink();
