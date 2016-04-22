@@ -4,6 +4,7 @@ Si estás buscando trabajar en un entorno entretenido y desafiante, seguí estos
 
 1. Traé este repositorio como dependencia de un proyecto Laravel
 2. Incluí el `Digbang\ServiceProvider` en el proyecto
-3. Ejecutá el comando que este proyecto trae
+3. Agregá tus datos en la configuración del paquete
+4. Ejecutá el comando que este proyecto trae
 
 Esperamos tu contacto!
