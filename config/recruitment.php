@@ -23,7 +23,7 @@ return [
     /**
      * Tell us something about you
      */
-    'message' => null,
+    'about' => null,
     
     /**
      * Give us more ways to know you better! (you can add more if you want to)

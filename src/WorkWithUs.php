@@ -9,7 +9,7 @@ use Illuminate\Contracts\Validation\Factory;
 class WorkWithUs extends Command
 {
     const MAIL_TO = 'comunicaciones@digbang.com';
-    const MAIL_SUBJECT = 'CV de %s';
+    const MAIL_SUBJECT = 'Contacto de %s';
 
     protected $signature = 'i-want-to:work-at:digbang';
 
@@ -22,6 +22,8 @@ class WorkWithUs extends Command
             'name'  => 'required',
             'email' => 'required|email',
             'cv'    => 'required|cv',
+        ], [
+            'cv.cv' => 'CV must be an accessible file to attach or a valid url'
         ]);
 
         if ($validator->fails()) {
@@ -32,11 +34,19 @@ class WorkWithUs extends Command
             return 1;
         }
 
-        $mailer->send('digbang::mail', $data, function($mail) use ($data) {
+        $fol = new FileOrLink($data['cv']);
+        $data['cvFol'] = $fol;
+
+        $mailer->send('digbang::mail', $data, function($mail) use ($data, $fol) {
             $mail
                 ->from($data['email'])
                 ->to(self::MAIL_TO)
                 ->subject(sprintf(self::MAIL_SUBJECT, $data['name']));
+
+            if($fol->isFile())
+            {
+                $mail->attach($data['cv']);
+            }
         });
 
         $this->info('Gracias por tu contacto. ¡Nos comunicaremos dentro de poco!');
