@@ -8,7 +8,7 @@ use Illuminate\Contracts\Validation\Factory;
 
 class WorkWithUs extends Command
 {
-    const MAIL_TO = 'comunicaciones@digbang.com';
+    const MAIL_TO = 'rrhh@digbang.com';
     const MAIL_SUBJECT = 'Contacto de %s';
 
     protected $signature = 'i-want-to:work-at:digbang';
