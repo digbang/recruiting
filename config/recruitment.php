@@ -1,32 +1,32 @@
 <?php
 return [
     /**
-     * Give us your full name here
+     * Danos tu nombre y apellido
      */
     'name'  => null,
 
     /**
-     * Where can we call you?
+     * A dónde te podemos llamar?
      */
     'phone' => null,
 
     /**
-     * We'll need an email to contact you
+     * Vamos a necesitar un email para contactarte
      */
     'email' => null,
 
     /**
-     * Point us to your CV (file or link)
+     * Apuntanos a tu curriculum (archivo o url)
      */
     'cv' => null,
     
     /**
-     * Tell us something about you
+     * Contanos algo de vos
      */
     'about' => null,
     
     /**
-     * Give us more ways to know you better! (you can add more if you want to)
+     * Danos más formas de conocerte mejor! (podes agregar más si querés)
      */
     'portfolio' => [
         'LinkedIn'      => null,
